@@ -12,6 +12,7 @@
     "@ethersproject/bytes": "^5.0.0",
     "@ethersproject/providers": "^5.7.0",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
+    "@nomicfoundation/hardhat-foundry": "^1.0.2",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.4",
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
     "@nomiclabs/hardhat-ethers": "^2.1.1",
@@ -46,5 +47,9 @@
   },
   "engines": {
     "node": ">=16.13.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.2",
+    "forge-std": "github:foundry-rs/forge-std"
   }
 }
