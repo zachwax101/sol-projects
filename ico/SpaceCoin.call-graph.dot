@@ -1,0 +1,81 @@
+strict digraph {
+subgraph cluster_44100_IERC20 {
+label = "IERC20"
+"44100_balanceOf" [label="balanceOf"]
+"44100_approve" [label="approve"]
+"44100_totalSupply" [label="totalSupply"]
+"44100_transfer" [label="transfer"]
+"44100_transferFrom" [label="transferFrom"]
+"44100_allowance" [label="allowance"]
+}subgraph cluster_582_SpaceCoin {
+label = "SpaceCoin"
+"582_slitherConstructorVariables" [label="slitherConstructorVariables"]
+"582_constructor" [label="constructor"]
+"582_toggleTax" [label="toggleTax"]
+"582_transfer" [label="transfer"]
+"582_constructor" -> "582__mint"
+"582_toggleTax" -> "582_onlyOwner"
+"582_transfer" -> "582__transfer"
+"582_constructor" -> "582_constructor"
+}subgraph cluster_44147_Context {
+label = "Context"
+"44147__msgSender" [label="_msgSender"]
+"44147__msgData" [label="_msgData"]
+}subgraph cluster_44022_ERC20 {
+label = "ERC20"
+"44022__approve" [label="_approve"]
+"44022_allowance" [label="allowance"]
+"44022_transferFrom" [label="transferFrom"]
+"44022__afterTokenTransfer" [label="_afterTokenTransfer"]
+"44022__burn" [label="_burn"]
+"44022__transfer" [label="_transfer"]
+"44022_totalSupply" [label="totalSupply"]
+"44022_decimals" [label="decimals"]
+"44022__mint" [label="_mint"]
+"44022_decreaseAllowance" [label="decreaseAllowance"]
+"44022_symbol" [label="symbol"]
+"44022_constructor" [label="constructor"]
+"44022__spendAllowance" [label="_spendAllowance"]
+"44022_increaseAllowance" [label="increaseAllowance"]
+"44022_balanceOf" [label="balanceOf"]
+"44022_name" [label="name"]
+"44022_approve" [label="approve"]
+"44022__beforeTokenTransfer" [label="_beforeTokenTransfer"]
+"44022_transfer" [label="transfer"]
+"44022__burn" -> "44022__afterTokenTransfer"
+"44022_transfer" -> "44022__transfer"
+"44022__mint" -> "44022__beforeTokenTransfer"
+"44022_approve" -> "44022__approve"
+"44022_increaseAllowance" -> "44022__approve"
+"44022_transferFrom" -> "44022__msgSender"
+"44022__spendAllowance" -> "44022__approve"
+"44022_transferFrom" -> "44022__spendAllowance"
+"44022_increaseAllowance" -> "44022_allowance"
+"44022__transfer" -> "44022__beforeTokenTransfer"
+"44022_decreaseAllowance" -> "44022_allowance"
+"44022__burn" -> "44022__beforeTokenTransfer"
+"44022_approve" -> "44022__msgSender"
+"44022_decreaseAllowance" -> "44022__msgSender"
+"44022_increaseAllowance" -> "44022__msgSender"
+"44022_transferFrom" -> "44022__transfer"
+"44022__transfer" -> "44022__afterTokenTransfer"
+"44022_transfer" -> "44022__msgSender"
+"44022__mint" -> "44022__afterTokenTransfer"
+"44022_decreaseAllowance" -> "44022__approve"
+"44022__spendAllowance" -> "44022_allowance"
+}subgraph cluster_44125_IERC20Metadata {
+label = "IERC20Metadata"
+"44125_name" [label="name"]
+"44125_symbol" [label="symbol"]
+"44125_decimals" [label="decimals"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool,string)" 
+"44022__burn" -> "require(bool,string)"
+"44022__mint" -> "require(bool,string)"
+"44022__spendAllowance" -> "require(bool,string)"
+"44022__approve" -> "require(bool,string)"
+"44022_decreaseAllowance" -> "require(bool,string)"
+"44022__transfer" -> "require(bool,string)"
+}
+}

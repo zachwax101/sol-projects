@@ -1,0 +1,27 @@
+strict digraph {
+subgraph cluster_8744_stdJson {
+label = "stdJson"
+"8744_readIntArray" [label="readIntArray"]
+"8744_readString" [label="readString"]
+"8744_readUintArray" [label="readUintArray"]
+"8744_readBytesArray" [label="readBytesArray"]
+"8744_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"8744_readBytes" [label="readBytes"]
+"8744_readBoolArray" [label="readBoolArray"]
+"8744_readBytes32" [label="readBytes32"]
+"8744_readBytes32Array" [label="readBytes32Array"]
+"8744_serialize" [label="serialize"]
+"8744_readAddressArray" [label="readAddressArray"]
+"8744_parseRaw" [label="parseRaw"]
+"8744_readBool" [label="readBool"]
+"8744_readAddress" [label="readAddress"]
+"8744_write" [label="write"]
+"8744_readStringArray" [label="readStringArray"]
+"8744_readInt" [label="readInt"]
+"8744_readUint" [label="readUint"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"keccak256(bytes)" 
+"8744_slitherConstructorConstantVariables" -> "keccak256(bytes)"
+}
+}

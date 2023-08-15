@@ -1,0 +1,10 @@
+strict digraph {
+subgraph cluster_7944_stdError {
+label = "stdError"
+"7944_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"abi.encodeWithSignature()" 
+"7944_slitherConstructorConstantVariables" -> "abi.encodeWithSignature()"
+}
+}

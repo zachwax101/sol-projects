@@ -1,0 +1,313 @@
+strict digraph {
+subgraph cluster_5060_StdChains {
+label = "StdChains"
+"5060_setChainWithDefaultRpcUrl" [label="setChainWithDefaultRpcUrl"]
+"5060__toUpper" [label="_toUpper"]
+"5060_setChain" [label="setChain"]
+"5060_getChainWithUpdatedRpcUrl" [label="getChainWithUpdatedRpcUrl"]
+"5060_getChain" [label="getChain"]
+"5060_initializeStdChains" [label="initializeStdChains"]
+"5060_setFallbackToDefaultRpcUrls" [label="setFallbackToDefaultRpcUrls"]
+"5060_setChain" -> "5060_setChain"
+"5060_initializeStdChains" -> "5060_setChainWithDefaultRpcUrl"
+"5060_getChain" -> "5060_getChainWithUpdatedRpcUrl"
+"5060_getChain" -> "5060_initializeStdChains"
+"5060_setChain" -> "5060_initializeStdChains"
+"5060_setChainWithDefaultRpcUrl" -> "5060_setChain"
+"5060_getChainWithUpdatedRpcUrl" -> "5060__toUpper"
+}subgraph cluster_7878_StdCheats {
+label = "StdCheats"
+"7878_dealERC721" [label="dealERC721"]
+"7878_startHoax" [label="startHoax"]
+"7878_skip" [label="skip"]
+"7878_rewind" [label="rewind"]
+"7878_deal" [label="deal"]
+"7878_dealERC1155" [label="dealERC1155"]
+"7878_changePrank" [label="changePrank"]
+"7878_deployCodeTo" [label="deployCodeTo"]
+"7878_hoax" [label="hoax"]
+"7878_dealERC1155" -> "7878_dealERC1155"
+"7878_deployCodeTo" -> "7878_deployCodeTo"
+"7878_deal" -> "7878_deal"
+}subgraph cluster_8168_StdInvariant {
+label = "StdInvariant"
+"8168_targetContract" [label="targetContract"]
+"8168_targetArtifacts" [label="targetArtifacts"]
+"8168_excludeSender" [label="excludeSender"]
+"8168_excludeSenders" [label="excludeSenders"]
+"8168_targetContracts" [label="targetContracts"]
+"8168_targetArtifact" [label="targetArtifact"]
+"8168_targetArtifactSelector" [label="targetArtifactSelector"]
+"8168_targetSelector" [label="targetSelector"]
+"8168_excludeArtifact" [label="excludeArtifact"]
+"8168_targetSelectors" [label="targetSelectors"]
+"8168_targetSenders" [label="targetSenders"]
+"8168_excludeContract" [label="excludeContract"]
+"8168_targetArtifactSelectors" [label="targetArtifactSelectors"]
+"8168_excludeContracts" [label="excludeContracts"]
+"8168_targetSender" [label="targetSender"]
+"8168_excludeArtifacts" [label="excludeArtifacts"]
+}subgraph cluster_7114_StdCheatsSafe {
+label = "StdCheatsSafe"
+"7114_assumeNotZeroAddress" [label="assumeNotZeroAddress"]
+"7114_assumeNotPrecompile" [label="assumeNotPrecompile"]
+"7114_assumeAddressIsNot" [label="assumeAddressIsNot"]
+"7114_makeAddr" [label="makeAddr"]
+"7114_assumeNotBlacklisted" [label="assumeNotBlacklisted"]
+"7114_readReceipt" [label="readReceipt"]
+"7114_assumeNoBlacklisted" [label="assumeNoBlacklisted"]
+"7114_assumeNotPayable" [label="assumeNotPayable"]
+"7114_isFork" [label="isFork"]
+"7114_deriveRememberKey" [label="deriveRememberKey"]
+"7114_assumeNotForgeAddress" [label="assumeNotForgeAddress"]
+"7114_rawToConvertedReceipts" [label="rawToConvertedReceipts"]
+"7114_rawToConvertedReceipt" [label="rawToConvertedReceipt"]
+"7114__isPayable" [label="_isPayable"]
+"7114_makeAddrAndKey" [label="makeAddrAndKey"]
+"7114_rawToConvertedEIPTx1559s" [label="rawToConvertedEIPTx1559s"]
+"7114_assumePayable" [label="assumePayable"]
+"7114_readTx1559" [label="readTx1559"]
+"7114_readTx1559s" [label="readTx1559s"]
+"7114_makeAccount" [label="makeAccount"]
+"7114_destroyAccount" [label="destroyAccount"]
+"7114_rawToConvertedEIP1559Detail" [label="rawToConvertedEIP1559Detail"]
+"7114_rawToConvertedReceiptLogs" [label="rawToConvertedReceiptLogs"]
+"7114__viewChainId" [label="_viewChainId"]
+"7114_readReceipts" [label="readReceipts"]
+"7114_rawToConvertedEIPTx1559" [label="rawToConvertedEIPTx1559"]
+"7114_readEIP1559ScriptArtifact" [label="readEIP1559ScriptArtifact"]
+"7114_deployCode" [label="deployCode"]
+"7114__bytesToUint" [label="_bytesToUint"]
+"7114__pureChainId" [label="_pureChainId"]
+"7114_assumeNotPayable" -> "7114__isPayable"
+"7114_assumePayable" -> "7114__isPayable"
+"7114_readTx1559s" -> "7114_rawToConvertedEIPTx1559s"
+"7114_makeAddr" -> "7114_makeAddrAndKey"
+"7114_rawToConvertedReceipt" -> "7114_rawToConvertedReceiptLogs"
+"7114_assumeAddressIsNot" -> "7114_assumeNotPayable"
+"7114_rawToConvertedReceiptLogs" -> "7114__bytesToUint"
+"7114_assumeAddressIsNot" -> "7114_assumeNotZeroAddress"
+"7114_assumeAddressIsNot" -> "7114_assumeAddressIsNot"
+"7114_assumeAddressIsNot" -> "7114_assumeNotForgeAddress"
+"7114_assumeNotPrecompile" -> "7114_assumeNotPrecompile"
+"7114_readEIP1559ScriptArtifact" -> "7114_rawToConvertedReceipts"
+"7114_readReceipts" -> "7114_rawToConvertedReceipts"
+"7114_assumeNotPrecompile" -> "7114__pureChainId"
+"7114_rawToConvertedEIP1559Detail" -> "7114__bytesToUint"
+"7114_rawToConvertedEIPTx1559" -> "7114_rawToConvertedEIP1559Detail"
+"7114_assumeAddressIsNot" -> "7114_assumeNotPrecompile"
+"7114_assumeAddressIsNot" -> "7114_assumePayable"
+"7114_readReceipt" -> "7114_rawToConvertedReceipt"
+"7114_rawToConvertedReceipts" -> "7114_rawToConvertedReceipt"
+"7114_rawToConvertedReceipt" -> "7114__bytesToUint"
+"7114_assumeNoBlacklisted" -> "7114_assumeNotBlacklisted"
+"7114_readTx1559" -> "7114_rawToConvertedEIPTx1559"
+"7114_makeAccount" -> "7114_makeAddrAndKey"
+"7114_rawToConvertedEIPTx1559s" -> "7114_rawToConvertedEIPTx1559"
+"7114_readEIP1559ScriptArtifact" -> "7114_rawToConvertedEIPTx1559s"
+}subgraph cluster_12430_StdUtils {
+label = "StdUtils"
+"12430_bytesToUint" [label="bytesToUint"]
+"12430_bound" [label="bound"]
+"12430_computeCreateAddress" [label="computeCreateAddress"]
+"12430_console2_log" [label="console2_log"]
+"12430_addressFromLast20Bytes" [label="addressFromLast20Bytes"]
+"12430_hashInitCode" [label="hashInitCode"]
+"12430_getTokenBalances" [label="getTokenBalances"]
+"12430_computeCreate2Address" [label="computeCreate2Address"]
+"12430__bound" [label="_bound"]
+"12430_boundPrivateKey" [label="boundPrivateKey"]
+"12430_bound" -> "12430__bound"
+"12430_computeCreate2Address" -> "12430_computeCreate2Address"
+"12430_computeCreateAddress" -> "12430_addressFromLast20Bytes"
+"12430_hashInitCode" -> "12430_hashInitCode"
+"12430_boundPrivateKey" -> "12430__bound"
+"12430__bound" -> "12430__bound"
+"12430_bound" -> "12430_console2_log"
+"12430_computeCreate2Address" -> "12430_addressFromLast20Bytes"
+}subgraph cluster_4367_StdAssertions {
+label = "StdAssertions"
+"4367_assertEq" [label="assertEq"]
+"4367_fail" [label="fail"]
+"4367_assertApproxEqAbsDecimal" [label="assertApproxEqAbsDecimal"]
+"4367_assertEqUint" [label="assertEqUint"]
+"4367_assertFalse" [label="assertFalse"]
+"4367_assertEqCall" [label="assertEqCall"]
+"4367_assertApproxEqRel" [label="assertApproxEqRel"]
+"4367_assertApproxEqRelDecimal" [label="assertApproxEqRelDecimal"]
+"4367_assertApproxEqAbs" [label="assertApproxEqAbs"]
+"4367_assertEq" -> "4367_fail"
+"4367_assertFalse" -> "4367_assertTrue"
+"4367_assertApproxEqAbsDecimal" -> "4367_fail"
+"4367_assertApproxEqRelDecimal" -> "4367_assertEq"
+"4367_assertEqCall" -> "4367_fail"
+"4367_assertEqCall" -> "4367_assertEq"
+"4367_assertEqUint" -> "4367_assertEq"
+"4367_assertApproxEqRelDecimal" -> "4367_assertApproxEqRelDecimal"
+"4367_assertEqCall" -> "4367_assertEqCall"
+"4367_assertApproxEqRel" -> "4367_assertApproxEqRel"
+"4367_assertEq" -> "4367_assertEq0"
+"4367_assertApproxEqAbsDecimal" -> "4367_assertApproxEqAbsDecimal"
+"4367_assertApproxEqRel" -> "4367_assertEq"
+"4367_fail" -> "4367_fail"
+"4367_assertApproxEqAbs" -> "4367_assertApproxEqAbs"
+"4367_assertApproxEqRelDecimal" -> "4367_fail"
+"4367_assertEq" -> "4367_assertEq"
+"4367_assertApproxEqRel" -> "4367_fail"
+"4367_assertApproxEqAbs" -> "4367_fail"
+}subgraph cluster_2874_DSTest {
+label = "DSTest"
+"2874_assertEq32" [label="assertEq32"]
+"2874_assertNotEq32" [label="assertNotEq32"]
+"2874_failed" [label="failed"]
+"2874_assertLe" [label="assertLe"]
+"2874_assertGe" [label="assertGe"]
+"2874_assertGeDecimal" [label="assertGeDecimal"]
+"2874_assertLtDecimal" [label="assertLtDecimal"]
+"2874_assertGt" [label="assertGt"]
+"2874_assertLt" [label="assertLt"]
+"2874_assertEq" [label="assertEq"]
+"2874_hasHEVMContext" [label="hasHEVMContext"]
+"2874_assertNotEq" [label="assertNotEq"]
+"2874_assertTrue" [label="assertTrue"]
+"2874_assertGtDecimal" [label="assertGtDecimal"]
+"2874_assertNotEqDecimal" [label="assertNotEqDecimal"]
+"2874_fail" [label="fail"]
+"2874_assertEq0" [label="assertEq0"]
+"2874_assertLeDecimal" [label="assertLeDecimal"]
+"2874_assertEqDecimal" [label="assertEqDecimal"]
+"2874_checkEq0" [label="checkEq0"]
+"2874_assertNotEq0" [label="assertNotEq0"]
+"2874_assertGe" -> "2874_fail"
+"2874_assertGe" -> "2874_assertGe"
+"2874_assertNotEqDecimal" -> "2874_fail"
+"2874_assertEq0" -> "2874_assertEq0"
+"2874_assertEq0" -> "2874_checkEq0"
+"2874_assertGtDecimal" -> "2874_assertGtDecimal"
+"2874_assertNotEq" -> "2874_assertNotEq"
+"2874_assertGt" -> "2874_fail"
+"2874_failed" -> "2874_hasHEVMContext"
+"2874_assertEqDecimal" -> "2874_assertEqDecimal"
+"2874_assertTrue" -> "2874_fail"
+"2874_assertGt" -> "2874_assertGt"
+"2874_assertNotEq0" -> "2874_checkEq0"
+"2874_assertNotEq" -> "2874_fail"
+"2874_assertGeDecimal" -> "2874_fail"
+"2874_assertEq32" -> "2874_assertEq"
+"2874_assertEq" -> "2874_assertEq"
+"2874_assertNotEq0" -> "2874_assertNotEq0"
+"2874_fail" -> "2874_hasHEVMContext"
+"2874_assertEq" -> "2874_fail"
+"2874_assertLtDecimal" -> "2874_fail"
+"2874_assertNotEq32" -> "2874_assertNotEq"
+"2874_assertLe" -> "2874_fail"
+"2874_assertLe" -> "2874_assertLe"
+"2874_assertEqDecimal" -> "2874_fail"
+"2874_assertTrue" -> "2874_assertTrue"
+"2874_assertNotEqDecimal" -> "2874_assertNotEqDecimal"
+"2874_assertLeDecimal" -> "2874_fail"
+"2874_assertLt" -> "2874_fail"
+"2874_assertLeDecimal" -> "2874_assertLeDecimal"
+"2874_assertGeDecimal" -> "2874_assertGeDecimal"
+"2874_assertLtDecimal" -> "2874_assertLtDecimal"
+"2874_assertLt" -> "2874_assertLt"
+"2874_assertEq0" -> "2874_fail"
+"2874_assertNotEq0" -> "2874_fail"
+"2874_assertGtDecimal" -> "2874_fail"
+}subgraph cluster_45150_SpaceCoinTest {
+label = "SpaceCoinTest"
+"45150_testInitialSupply" [label="testInitialSupply"]
+"45150_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"45150_testTransfer" [label="testTransfer"]
+"45150_slitherConstructorVariables" [label="slitherConstructorVariables"]
+"45150_setUp" [label="setUp"]
+"45150_testInitialSupply" -> "45150_assertEq"
+"45150_testTransfer" -> "45150_assertEq"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"abi.encodePacked()" 
+"require(bool,string)" 
+"abi.encode()" 
+"chainid()" 
+"abi.decode()" 
+"mload(uint256)" 
+"keccak256(bytes)" 
+"balance(address)" 
+"abi.encodeWithSignature()" 
+"create(uint256,uint256,uint256)" 
+"revert(uint256,uint256)" 
+"abi.encodeWithSelector()" 
+"7878_deal" -> "abi.decode()"
+"7114_readEIP1559ScriptArtifact" -> "abi.decode()"
+"7114_deployCode" -> "create(uint256,uint256,uint256)"
+"7114_readReceipts" -> "abi.decode()"
+"12430_getTokenBalances" -> "abi.encodeWithSelector()"
+"7114__viewChainId" -> "chainid()"
+"5060_getChain" -> "abi.encodePacked()"
+"2874_fail" -> "abi.encodePacked()"
+"2874_assertNotEq" -> "keccak256(bytes)"
+"7114__bytesToUint" -> "require(bool,string)"
+"7114__bytesToUint" -> "abi.encodePacked()"
+"7114__isPayable" -> "balance(address)"
+"12430_hashInitCode" -> "abi.encodePacked()"
+"2874_assertEq" -> "abi.encodePacked()"
+"2874_failed" -> "keccak256(bytes)"
+"7878_deployCodeTo" -> "abi.encodePacked()"
+"12430__bound" -> "require(bool,string)"
+"2874_assertNotEq" -> "abi.encodePacked()"
+"12430_bytesToUint" -> "abi.encodePacked()"
+"12430_computeCreate2Address" -> "abi.encodePacked()"
+"5060_getChainWithUpdatedRpcUrl" -> "abi.encodePacked()"
+"45150_slitherConstructorConstantVariables" -> "keccak256(bytes)"
+"5060_setChain" -> "require(bool,string)"
+"12430_getTokenBalances" -> "require(bool,string)"
+"2874_fail" -> "abi.encode()"
+"7114_readTx1559" -> "abi.decode()"
+"7114_readReceipt" -> "abi.encodePacked()"
+"7114_assumeNotBlacklisted" -> "abi.decode()"
+"7114_readReceipt" -> "abi.decode()"
+"7114_makeAddrAndKey" -> "keccak256(bytes)"
+"12430_computeCreateAddress" -> "abi.encodePacked()"
+"7878_dealERC1155" -> "abi.encodeWithSelector()"
+"12430_bytesToUint" -> "abi.decode()"
+"4367_assertEq" -> "keccak256(bytes)"
+"2874_fail" -> "keccak256(bytes)"
+"5060_getChainWithUpdatedRpcUrl" -> "revert(uint256,uint256)"
+"7114__isPayable" -> "require(bool,string)"
+"7878_dealERC721" -> "abi.decode()"
+"5060_setChain" -> "keccak256(bytes)"
+"2874_failed" -> "abi.encode()"
+"12430_getTokenBalances" -> "abi.decode()"
+"7114_readTx1559" -> "abi.encodePacked()"
+"5060_getChain" -> "require(bool,string)"
+"7114_readTx1559s" -> "abi.decode()"
+"12430_computeCreate2Address" -> "keccak256(bytes)"
+"7114_assumeNotBlacklisted" -> "require(bool,string)"
+"7878_dealERC1155" -> "require(bool,string)"
+"7878_dealERC1155" -> "abi.decode()"
+"12430_hashInitCode" -> "keccak256(bytes)"
+"7114_destroyAccount" -> "abi.encode()"
+"12430_bytesToUint" -> "require(bool,string)"
+"7114_assumeNotBlacklisted" -> "abi.encodeWithSelector()"
+"5060_getChainWithUpdatedRpcUrl" -> "mload(uint256)"
+"5060_getChainWithUpdatedRpcUrl" -> "abi.encodeWithSignature()"
+"2874_assertEq" -> "keccak256(bytes)"
+"7114_makeAddrAndKey" -> "abi.encodePacked()"
+"7878_deal" -> "abi.encodeWithSelector()"
+"7878_dealERC721" -> "abi.encodeWithSelector()"
+"7114__bytesToUint" -> "abi.decode()"
+"5060_setChain" -> "abi.encodePacked()"
+"2874_failed" -> "abi.encodePacked()"
+"12430_console2_log" -> "abi.encodeWithSignature()"
+"7114_deployCode" -> "abi.encodePacked()"
+"2874_failed" -> "abi.decode()"
+"7878_deployCodeTo" -> "require(bool,string)"
+"5060_getChainWithUpdatedRpcUrl" -> "keccak256(bytes)"
+"7114_deployCode" -> "mload(uint256)"
+"7114_destroyAccount" -> "balance(address)"
+"4367_assertEq" -> "abi.encode()"
+"12430_computeCreateAddress" -> "keccak256(bytes)"
+"7878_dealERC721" -> "require(bool,string)"
+"7114_deployCode" -> "require(bool,string)"
+}
+}

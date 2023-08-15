@@ -13,8 +13,8 @@
   },
   "files": {
     "contracts/Ico.sol": {
-      "lastModificationDate": 1689634038107,
-      "contentHash": "5eece9365bb89171cc7244ac4b465e7c",
+      "lastModificationDate": 1691682429659,
+      "contentHash": "86fd2c672c38d4de41e51e36c337bdd2",
       "sourceName": "contracts/Ico.sol",
       "solcConfig": {
         "settings": {
@@ -37,7 +37,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -62,7 +63,7 @@
       }
     },
     "contracts/SpaceCoin.sol": {
-      "lastModificationDate": 1689633703480,
+      "lastModificationDate": 1691189862964,
       "contentHash": "733c41b77ba6dd1baff5b1eacba647f0",
       "sourceName": "contracts/SpaceCoin.sol",
       "solcConfig": {
@@ -86,7 +87,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -135,7 +137,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -176,7 +179,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -226,7 +230,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -270,7 +275,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -313,7 +319,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -360,7 +367,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -401,7 +409,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -442,7 +451,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -485,7 +495,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -526,7 +537,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -572,7 +584,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -615,7 +628,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -659,7 +673,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -703,7 +718,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -744,7 +760,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -785,7 +802,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -826,7 +844,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -867,7 +886,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -926,7 +946,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -971,7 +992,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -1012,7 +1034,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -1055,7 +1078,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -1071,10 +1095,10 @@
         }
       }
     },
-    "test/Ico.t.sol": {
-      "lastModificationDate": 1689634384349,
-      "contentHash": "f61dff8b606ebaed56db1bfa636836a1",
-      "sourceName": "test/Ico.t.sol",
+    "test/Ico.opix.t.sol": {
+      "lastModificationDate": 1691681121930,
+      "contentHash": "2159135a597127ecce5bc9f910ba4b59",
+      "sourceName": "test/Ico.opix.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1096,7 +1120,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -1130,15 +1155,15 @@
         "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
         "node_modules/@openzeppelin/contracts/utils/Context.sol"
       ],
-      "versionRequirement": "^0.8.0",
+      "versionRequirement": "=0.8.19",
       "artifacts": {
         "IcoTest": {
-          "0.8.19+commit.7dd6d404.Darwin.appleclang": "Ico.t.sol/IcoTest.json"
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "Ico.opix.t.sol/IcoTest.json"
         }
       }
     },
     "test/SpaceCoin.t.sol": {
-      "lastModificationDate": 1689461628383,
+      "lastModificationDate": 1691189863058,
       "contentHash": "d1786067813de3379d4f9ffc1e1a3f72",
       "sourceName": "test/SpaceCoin.t.sol",
       "solcConfig": {
@@ -1162,7 +1187,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ]
             }
           },
@@ -1200,6 +1226,48 @@
       "artifacts": {
         "SpaceCoinTest": {
           "0.8.19+commit.7dd6d404.Darwin.appleclang": "SpaceCoin.t.sol/SpaceCoinTest.json"
+        }
+      }
+    },
+    "test/f37499a4-2811-4d0e-bdbf-73d955d4084c.test.sol": {
+      "lastModificationDate": 1691617139780,
+      "contentHash": "c20bfd36ad5579fa849b12139b38bae8",
+      "sourceName": "test/f37499a4-2811-4d0e-bdbf-73d955d4084c.test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": null,
+      "artifacts": {
+        "f37499a4-2811-4d0e-bdbf-73d955d4084c.test": {
+          "0.8.19+commit.7dd6d404.Darwin.appleclang": "f37499a4-2811-4d0e-bdbf-73d955d4084c.test.sol/f37499a4-2811-4d0e-bdbf-73d955d4084c.test.json"
         }
       }
     }

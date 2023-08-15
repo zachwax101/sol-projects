@@ -1,0 +1,51 @@
+strict digraph {
+subgraph cluster_9810_stdStorageSafe {
+label = "stdStorageSafe"
+"9810_depth" [label="depth"]
+"9810_bytesToBytes32" [label="bytesToBytes32"]
+"9810_read_bytes32" [label="read_bytes32"]
+"9810_sig" [label="sig"]
+"9810_read_bool" [label="read_bool"]
+"9810_with_key" [label="with_key"]
+"9810_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"9810_read_int" [label="read_int"]
+"9810_read_uint" [label="read_uint"]
+"9810_sigs" [label="sigs"]
+"9810_read_address" [label="read_address"]
+"9810_flatten" [label="flatten"]
+"9810_target" [label="target"]
+"9810_read" [label="read"]
+"9810_find" [label="find"]
+"9810_sig" -> "9810_sigs"
+"9810_read_bytes32" -> "9810_read"
+"9810_read" -> "9810_find"
+"9810_find" -> "9810_bytesToBytes32"
+"9810_read_bool" -> "9810_read_int"
+"9810_read_int" -> "9810_read"
+"9810_read_uint" -> "9810_read"
+"9810_read_address" -> "9810_read"
+"9810_find" -> "9810_flatten"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert(string)" 
+"abi.encodePacked()" 
+"require(bool,string)" 
+"abi.encode()" 
+"abi.decode()" 
+"mstore(uint256,uint256)" 
+"keccak256(bytes)" 
+"9810_read_int" -> "abi.decode()"
+"9810_read_uint" -> "abi.decode()"
+"9810_flatten" -> "mstore(uint256,uint256)"
+"9810_slitherConstructorConstantVariables" -> "keccak256(bytes)"
+"9810_read_address" -> "abi.decode()"
+"9810_sigs" -> "keccak256(bytes)"
+"9810_read_bool" -> "revert(string)"
+"9810_find" -> "revert(string)"
+"9810_find" -> "require(bool,string)"
+"9810_read" -> "abi.encode()"
+"9810_find" -> "abi.encodePacked()"
+"9810_read_bytes32" -> "abi.decode()"
+"9810_find" -> "keccak256(bytes)"
+}
+}

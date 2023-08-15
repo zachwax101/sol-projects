@@ -1,0 +1,21 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/f37499a4-2811-4d0e-bdbf-73d955d4084c.test.sol",
+    "id": 47443,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "14565:0:26",
+    "nodes": [],
+    "license": "Unlicense"
+  },
+  "id": 26
+}

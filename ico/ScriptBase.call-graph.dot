@@ -1,0 +1,10 @@
+strict digraph {
+subgraph cluster_2949_ScriptBase {
+label = "ScriptBase"
+"2949_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"keccak256(bytes)" 
+"2949_slitherConstructorConstantVariables" -> "keccak256(bytes)"
+}
+}

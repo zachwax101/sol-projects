@@ -1,0 +1,15 @@
+strict digraph {
+subgraph cluster_8886_stdMath {
+label = "stdMath"
+"8886_abs" [label="abs"]
+"8886_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"8886_delta" [label="delta"]
+"8886_percentDelta" [label="percentDelta"]
+"8886_delta" -> "8886_abs"
+"8886_delta" -> "8886_delta"
+"8886_percentDelta" -> "8886_abs"
+"8886_percentDelta" -> "8886_delta"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

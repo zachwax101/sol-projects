@@ -1,0 +1,39 @@
+strict digraph {
+subgraph cluster_439_Ico {
+label = "Ico"
+"439_slitherConstructorVariables" [label="slitherConstructorVariables"]
+"439_constructor" [label="constructor"]
+"439_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"439_contributeOpen" [label="contributeOpen"]
+"439_toggleAcceptingRedemptions" [label="toggleAcceptingRedemptions"]
+"439_toggleAcceptingContributions" [label="toggleAcceptingContributions"]
+"439_contributeGeneral" [label="contributeGeneral"]
+"439_contributeSeed" [label="contributeSeed"]
+"439_addressAllowed" [label="addressAllowed"]
+"439_redeem" [label="redeem"]
+"439_advancePhase" [label="advancePhase"]
+"439_contribute" [label="contribute"]
+"439_contribute" -> "439_contributeSeed"
+"439_advancePhase" -> "439_onlyOwner"
+"439_toggleAcceptingRedemptions" -> "439_onlyOwner"
+"439_toggleAcceptingContributions" -> "439_onlyOwner"
+"439_contributeSeed" -> "439_addressAllowed"
+"439_contribute" -> "439_contributeGeneral"
+"439_contribute" -> "439_contributeOpen"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert(string)" 
+"keccak256(bytes)" 
+"abi.encodePacked()" 
+"require(bool,string)" 
+"439_advancePhase" -> "keccak256(bytes)"
+"439_contributeOpen" -> "require(bool,string)"
+"439_advancePhase" -> "abi.encodePacked()"
+"439_advancePhase" -> "revert(string)"
+"439_contributeGeneral" -> "require(bool,string)"
+"439_contribute" -> "require(bool,string)"
+"439_redeem" -> "require(bool,string)"
+"439_advancePhase" -> "require(bool,string)"
+"439_contributeSeed" -> "require(bool,string)"
+}
+}

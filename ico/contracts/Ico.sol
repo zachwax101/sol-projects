@@ -11,17 +11,20 @@ contract Ico {
     address public owner;
     uint public totalContributions;
     mapping(address => uint) public contributions;
+    mapping(address => uint) public redeemed;
+    SpaceCoin public token;
+    uint public mostRecentAdvancePhaseBlock;
+    address[] public allowList;
+    bool public acceptingContributions;
+    bool public acceptingRedemptions;
+
     uint constant public SEED_MAX_TOTAL_CONTRIBUTION = 15000 ether;
     uint constant public SEED_MAX_INDIVIDUAL_CONTRIBUTION = 1500 ether;
-
     uint constant public GENERAL_MAX_TOTAL_CONTRIBUTION = 30000 ether;
     uint constant public GENERAL_MAX_INDIVIDUAL_CONTRIBUTION = 1000 ether;
-
     uint constant public OPEN_MAX_TOTAL_CONTRIBUTION = 30000 ether;
-    SpaceCoin public token;
 
     // maybe should use something that can be made constant, like bytes, instead of array which maybe can be manipulated by storage slot techniques
-    address[] public allowList;
 
     modifier onlyOwner() {
         require(msg.sender == owner, "Only owner can call this function");
@@ -32,11 +35,15 @@ contract Ico {
         allowList = _allowList;
         fundingPhase = FundingPhase.SEED;
         owner = msg.sender;
-
         token = new SpaceCoin(_treasury, owner);
+        acceptingContributions = true;
+        acceptingRedemptions = true;
     }
 
     function advancePhase(string memory _confirmation) onlyOwner public {
+        require(block.number > mostRecentAdvancePhaseBlock, "Cannot advance phase more than once per block");
+        mostRecentAdvancePhaseBlock = block.number;
+
         if (fundingPhase == FundingPhase.SEED) {
             require(keccak256(abi.encodePacked(_confirmation)) == keccak256(abi.encodePacked("GENERAL")), "Confirmation string does not match -- if you want to advance to general, use the string 'GENERAL'");
             fundingPhase = FundingPhase.GENERAL;
@@ -49,6 +56,7 @@ contract Ico {
     }
 
     function contribute() public payable {
+        require(acceptingContributions, "Not accepting contributions");
         if(fundingPhase == FundingPhase.SEED) {
             contributeSeed();
         } 
@@ -93,6 +101,13 @@ contract Ico {
         token.transfer(msg.sender, redeemed_amount);
     }
     
+    function redeem() public {
+        require(acceptingRedemptions, "Not accepting redemptions");
+        require(contributions[msg.sender] > redeemed[msg.sender], "No contributions to redeem");
+        uint amount = (contributions[msg.sender] - redeemed[msg.sender]) * 5;
+        redeemed[msg.sender] += amount;
+        token.transfer(msg.sender, amount);
+    }
 
     function addressAllowed(address _address) public view returns (bool) {
         for (uint i = 0; i < allowList.length; i++) {
@@ -101,6 +116,13 @@ contract Ico {
             }
         }
         return false;
+    }
+
+    function toggleAcceptingContributions() public onlyOwner {
+        acceptingContributions = !acceptingContributions;
+    }
+    function toggleAcceptingRedemptions() public onlyOwner {
+        acceptingRedemptions = !acceptingRedemptions;
     }
 }
 

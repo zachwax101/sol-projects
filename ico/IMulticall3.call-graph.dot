@@ -1,0 +1,23 @@
+strict digraph {
+subgraph cluster_30309_IMulticall3 {
+label = "IMulticall3"
+"30309_getBlockNumber" [label="getBlockNumber"]
+"30309_getEthBalance" [label="getEthBalance"]
+"30309_tryAggregate" [label="tryAggregate"]
+"30309_getCurrentBlockTimestamp" [label="getCurrentBlockTimestamp"]
+"30309_blockAndAggregate" [label="blockAndAggregate"]
+"30309_getCurrentBlockDifficulty" [label="getCurrentBlockDifficulty"]
+"30309_getChainId" [label="getChainId"]
+"30309_getCurrentBlockGasLimit" [label="getCurrentBlockGasLimit"]
+"30309_aggregate" [label="aggregate"]
+"30309_getBlockHash" [label="getBlockHash"]
+"30309_getBasefee" [label="getBasefee"]
+"30309_aggregate3" [label="aggregate3"]
+"30309_getCurrentBlockCoinbase" [label="getCurrentBlockCoinbase"]
+"30309_getLastBlockHash" [label="getLastBlockHash"]
+"30309_aggregate3Value" [label="aggregate3Value"]
+"30309_tryBlockAndAggregate" [label="tryBlockAndAggregate"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}
